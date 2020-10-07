@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Lista de usuários</title>
+</h:head>
+<h:body>
+	<h:form>
+
+		<div align="center" style="margin-top: 5%;">
+			<h:graphicImage library="images" name="sefaz-pe.png"></h:graphicImage>
+		</div>
+
+		<div align="center">
+			<p:commandButton value="Listar usuários" action="#{beanUsuario.SelectUsuario}"
+				style="background-color:#0B0B61; color:#F2F2F2;"
+				styleClass="ui-priority-primary" />
+		</div>
+
+		<div align="center" style="margin-top: 10px">
+			<p:dataTable var="u" value="#{beanUsuario.list}" style="width:30%" align="center" 
+				id="idTabela" >
+				<p:column headerText="Id">
+					<h:outputText value="#{u.id}}" />
+				</p:column>
+
+				<p:column headerText="Nome">
+					<h:outputText value="#{u.nome}" />
+				</p:column>
+
+				<p:column headerText="E-mail">
+					<h:outputText value="#{u.email}" />
+				</p:column>
+
+				<p:column headerText="">
+					<p:commandButton value="Editar"
+						style="background-color:#0B0B61; color:#F2F2F2;"
+						styleClass="ui-priority-primary" />
+				</p:column>
+
+				<p:column headerText="">
+					<p:commandButton value="Excluir"
+						style="background-color:#0B0B61; color:#F2F2F2;"
+						styleClass="ui-priority-primary" />
+				</p:column>
+			</p:dataTable>
+		</div>
+		<br />
+
+		<div align="center">
+			<p:button value="Voltar"
+				style="background-color:#0B0B61; color:#F2F2F2;"
+				styleClass="ui-priority-primary" outcome="/home.xhtml" />
+		</div>
+
+		<h:messages />
+	</h:form>
+</h:body>
+</html>

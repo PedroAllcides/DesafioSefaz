@@ -1,0 +1,15 @@
+beans\BeanTelefone.class
+business\IBusinessUsuario.class
+models\Telefone.class
+business\BusinessUsuario.class
+dao\IDAOusuario.class
+models\Usuario.class
+main\Main.class
+business\Fachada.class
+business\BusinessTelefone.class
+beans\BeanLogin.class
+business\IBusinessTelefone.class
+dao\DAOtelefone.class
+beans\BeanUsuario.class
+dao\DAOusuario.class
+dao\IDAOtelefone.class
